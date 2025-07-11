@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneLife Emulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="notification"></div>
+    
+    <header class="glass">
+        <div class="logo" id="logo-3d">
+            <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+            <span>ONELIFE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-section="home">ГЛАВНАЯ</a></li>
+                <li><a href="#" class="nav-link" data-section="profile">ПРОФИЛЬ</a></li>
+                <li><a href="#" class="nav-link" data-section="shop">МАГАЗИН</a></li>
+                <li><a href="#" class="nav-link" data-section="devs">РАЗРАБОТЧИКИ</a></li>
+                <li><a href="https://t.me/onelifebs" target="_blank" class="nav-link">НОВОСТИ</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="login-btn" class="holographic-btn"><i class="fas fa-sign-in-alt"></i> ВОЙТИ</button>
+            <button id="register-btn" class="holographic-btn"><i class="fas fa-user-plus"></i> РЕГИСТРАЦИЯ</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="neon-text">ONELIFE <span class="emulator-text">EMULATOR</span></h1>
+                    <p class="subtitle">Следующее поколение игровых возможностей</p>
+                    <div class="hero-buttons">
+                        <button id="buy-now-btn" class="holographic-btn"><i class="fas fa-gem"></i> ПРИОБРЕСТИ</button>
+                        <button id="free-version-btn" class="holographic-btn"><i class="fas fa-download"></i> БЕСПЛАТНАЯ ВЕРСИЯ</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div id="floating-cube"></div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card glass">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>МАКСИМАЛЬНАЯ ПРОИЗВОДИТЕЛЬНОСТЬ</h3>
+                    <p>Оптимизированный код для плавной работы даже на слабых ПК</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>ЗАЩИТА ОТ ОБНАРУЖЕНИЯ</h3>
+                    <p>Продвинутые алгоритмы маскировки активности</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>РЕГУЛЯРНЫЕ ОБНОВЛЕНИЯ</h3>
+                    <p>Постоянное улучшение и добавление новых функций</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <div class="profile-container glass">
+                <h2 class="neon-text">ВАШ ПРОФИЛЬ</h2>
+                <div class="profile-info">
+                    <p><strong>НИКНЕЙМ:</strong> <span id="profile-username">НЕ АВТОРИЗОВАН</span></p>
+                    <p><strong>КЛЮЧ АКТИВИРОВАН:</strong> <span id="profile-key-status">НЕТ</span></p>
+                    <p><strong>HWID:</strong> <span id="profile-hwid">НЕ ДОСТУПНО</span></p>
+                    <p><strong>ДАТА РЕГИСТРАЦИИ:</strong> <span id="profile-regdate">НЕ ДОСТУПНО</span></p>
+                    <p><strong>СРОК КЛЮЧА:</strong> <span id="profile-key-expiry">НЕ АКТИВИРОВАН</span></p>
+                </div>
+                <div class="profile-actions">
+                    <button id="activate-key-btn" class="holographic-btn"><i class="fas fa-key"></i> АКТИВИРОВАТЬ КЛЮЧ</button>
+                    <button id="logout-btn" class="holographic-btn"><i class="fas fa-sign-out-alt"></i> ВЫЙТИ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop">
+            <h2 class="neon-text">ВЫБЕРИТЕ ПОДПИСКУ</h2>
+            <div class="pricing-table">
+                <div class="pricing-card glass">
+                    <h3>1 МЕСЯЦ</h3>
+                    <div class="price">100₽</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Полный доступ к эмулятору</li>
+                        <li><i class="fas fa-check"></i> Техническая поддержка</li>
+                        <li><i class="fas fa-check"></i> Автоматические обновления</li>
+                    </ul>
+                    <button class="buy-btn holographic-btn">КУПИТЬ</button>
+                </div>
+                <div class="pricing-card glass popular">
+                    <div class="popular-badge">ВЫБОР ИГРОКОВ</div>
+                    <h3>3 МЕСЯЦА</h3>
+                    <div class="price">300₽</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Полный доступ к эмулятору</li>
+                        <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                        <li><i class="fas fa-check"></i> Автоматические обновления</li>
+                        <li><i class="fas fa-check"></i> Экономия 10%</li>
+                    </ul>
+                    <button class="buy-btn holographic-btn">КУПИТЬ</button>
+                </div>
+                <div class="pricing-card glass">
+                    <h3>НАВСЕГДА</h3>
+                    <div class="price">600₽</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Пожизненный доступ</li>
+                        <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                        <li><i class="fas fa-check"></i> Автоматические обновления</li>
+                        <li><i class="fas fa-check"></i> Эксклюзивные функции</li>
+                    </ul>
+                    <button class="buy-btn holographic-btn">КУПИТЬ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developers Section -->
+        <section id="devs">
+            <div class="devs-container glass">
+                <h2 class="neon-text">ᴩᴀзᴩᴀбоᴛчиᴋи</h2>
+                <div class="devs-grid">
+                    <div class="dev-card">
+                        <h3>ONELIFE EMULATOR</h3>
+                        <div class="dev-info">
+                            <p><i class="fas fa-code"></i> <strong>Разработчики:</strong>  Hizzex & Flowon</p>
+                            <p><i class="fas fa-globe"></i> <strong>Разработчик сайта:</strong>  Flowon</p>
+                            <p><i class="fas fa-tachometer-alt"></i> <strong>Оптимизация:</strong>  G1dra & Flowon</p>
+                            <p><i class="fas fa-paint-brush"></i> <strong>Дизайн:</strong>  Hizzex</p>
+                        </div>
+                    </div>
+                    <div class="dev-image">
+                        <div class="tech-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth Modals -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="close">&times;</span>
+                <h2 class="neon-text">ВХОД</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Никнейм" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="holographic-btn">ВОЙТИ</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="register-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="close">&times;</span>
+                <h2 class="neon-text">РЕГИСТРАЦИЯ</h2>
+                <form id="register-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Никнейм" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Повторите пароль" required>
+                    </div>
+                    <button type="submit" class="holographic-btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="key-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="close">&times;</span>
+                <h2 class="neon-text">АКТИВАЦИЯ КЛЮЧА</h2>
+                <form id="key-form">
+                    <div class="input-group">
+                        <i class="fas fa-key"></i>
+                        <input type="text" placeholder="Введите ключ" required>
+                    </div>
+                    <button type="submit" class="holographic-btn">АКТИВИРОВАТЬ</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span>ONELIFE</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-file-contract"></i> Пользовательское соглашение</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Политика конфиденциальности</a>
+                <a href="#"><i class="fas fa-headset"></i> Техническая поддержка</a>
+            </div>
+            <div class="social-links">
+                <a href="https://t.me/onelifebs" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://t.me/onelifebs"><i class="fab fa-discord"></i></a>
+                <a href="https://t.me/onelifebs"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ONELIFE EMULATOR. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
